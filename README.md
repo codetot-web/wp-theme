@@ -22,6 +22,7 @@ If you clone this template, it's better if you change some code:
 
 - PHP function with prefix `wp_theme_` to `your_theme_prefix_`, for example: `ct_media_`, in phpcs.xml and some strings in PHP files
 - Change text domain from `wp-theme` to `your-theme-prefix`
+- Find `WP_THEME_` and replace with `YOUR_THEME_PREFIX_`
 
 To start working with your local domain environment, please setup a local domain, such as `codetot.test`. Don't use `localhost/your-sub-dir/`.
 
