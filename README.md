@@ -1,6 +1,6 @@
 # Modern lightweight WordPress theme
 
-- Author: [khoipro](https://github.com/khoipro), [codetot]https://profiles.wordpress.org/codetot)
+- Author: [khoipro](https://github.com/khoipro), [codetot](https://profiles.wordpress.org/codetot)
 
 ## Tech Stack
 
