@@ -10,7 +10,7 @@ import {
 	map,
 	whileDo
 } from './utils'
-import Tweezer from 'tweezer.js'
+
 import { Promise } from 'es6-promise'
 
 const _getElementRect = (el) => el.getBoundingClientRect()
@@ -315,24 +315,6 @@ const getTopOffset = (el) => _getElementRect(el).top + getScrollTop()
 
 const getTopPosition = getProp('offsetTop')
 
-const scrollTop = (offset, callback, el) => {
-	new Tweezer({
-		start: getScrollTop(el),
-		end: offset
-	})
-		.on('tick', (v) => {
-			typeof el === 'undefined'
-				? window.scrollTo(0, v)
-				: setProp('scrollTop', v, el)
-		})
-		.on('done', () => {
-			if (typeof callback !== 'undefined') {
-				callback()
-			}
-		})
-		.begin()
-}
-
 /**
  * Trigger reflows so that transition happens after DOM insertion
  */
@@ -583,7 +565,6 @@ export {
 	ready,
 	remove,
 	removeClass,
-	scrollTop,
 	select,
 	selectAll,
 	setAttribute,
