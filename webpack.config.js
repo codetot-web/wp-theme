@@ -75,11 +75,11 @@ module.exports = {
 			port: 3000,
 			watch: true,
 			proxy: {
-				target: 'http://team.test/',
+				target: 'http://wp-theme.test/',
 				proxyReq: [
 					(proxyReq) => {
 						proxyReq.setHeader(
-							'X-Codetot-Child-Theme-Header',
+							'X-Codetot-Wp-Theme-Header',
 							process.env.NODE_ENV
 						)
 					}
