@@ -15,4 +15,9 @@ function wp_theme_frontend_assets() {
 
 	wp_enqueue_script('wp-theme-frontend-js', WP_THEME_URI . '/assets/css/frontend' . $build_prefix . '.css', [], WP_THEME_VERSION);
 }
-add_action('wp_enqueue_scripts', 'wp_theme_frontend_assets');
+add_action('wp_enqueue_scripts', 'wp_theme_frontend_assets', 50);
+
+function wp_theme_setup_theme() {
+	load_child_theme_textdomain('wp-theme', get_stylesheet_directory() . '/languages');
+}
+add_action('after_setup_theme', 'wp_theme_setup_theme');
